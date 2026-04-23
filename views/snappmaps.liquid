@@ -1,0 +1,15 @@
+{% render 'partials/head.liquid', title: 'Homepage' %}
+
+<main>
+  {% render 'partials/top-navigation.liquid' %}
+
+  <ul>
+    {% for group in groups %}
+      <li>
+        <a href="">{{ group.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% render 'partials/bottom-navigation.liquid' %}
+</main>

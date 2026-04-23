@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'BariolReg';
+    src: url('fonts/Bariol_Regular.otf');
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+:root {
+    /* Custom properties: widely */
+    --color-primary: #172F3B;
+    --color-button-background: #E9ECEE;
+    --color-background-secondary: #EEEEEE;
+    --color-secondary: #fff;
+    --color-secondary-text: #90A1AA;
+    --color-accent: #00E53D;
+
+    /* clamp: widely */
+    --text-size-m: calc(clamp(1.5rem, 0.583vw + 1.376rem, 2.25rem));
+    --text-size-s: 1.5rem;
+    --text-size-xs: 1rem;
+
+    /* vh: widely */
+    --bar-height: 9vh;
+
+    --spacing-button-inline: 2.688rem;
+    --spacing-button-block: 1.78rem;
+
+    --spacing-xxl: 9rem;
+    --spacing-m: 1.875rem;
+    --spacing-s: 1rem;
+
+}
+
+body {
+    font-family: 'BariolReg';
+    margin-bottom: var(--bar-height);
+
+    font-size: var(--text-size-m);
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+.bottom-nav {
+    background-color: var(--color-primary);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--bar-height);
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        height: 100%;
+
+        li {
+            height: 100%;
+            place-items: center;
+
+            svg {
+                height: 36%;
+            }
+        }
+    }
+}
